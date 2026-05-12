@@ -1,0 +1,10 @@
+API: API stands for Application Programming Interfaces. It is a software bridge that allows two different applications to communicate with eac other to share data and funtionality using a defined set of rules, protocols and data format.
+
+Note: The architecture in which frontend and backend can talk to each other without using an api is called a monolithic architecture where in fronted and backend are in a same folder.
+        The problem in monolithic architecture is that frontend and backend code are tightly coupled. SO if any other software application wants backend data, we cannot provide it.
+
+JSON: JSON stands for JavaScript Object Notation. It is a lightweight, text-based, and language-independent data-interchange format used to store and transport data, often between a server and a web application. 
+
+FastAPI: It is a modern, high performance web framework for building APIs with python. It is build on Starlette and Pydantic libraries of python.
+        Starelette manages how your API recieves request and sends back responses and Pydantic is used to check if the data coming into your API is correct and in the right format.
+
