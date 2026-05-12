@@ -1,0 +1,10 @@
+1.pip install fastapi uvicorn Pydantic
+
+To run the appl
+2. uvicorn main:app --reload
+    Note: reload means auto-update the webpage, if some changes are made in the code.
+            main is from the file name main.py.
+            app is the line where we defined the app=FastAPI()
+            uvicorn is the asgi server.
+
+To view the endpoints, after strating the server, after the url, use /docs.
