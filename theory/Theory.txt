@@ -8,3 +8,38 @@ JSON: JSON stands for JavaScript Object Notation. It is a lightweight, text-base
 FastAPI: It is a modern, high performance web framework for building APIs with python. It is build on Starlette and Pydantic libraries of python.
         Starelette manages how your API recieves request and sends back responses and Pydantic is used to check if the data coming into your API is correct and in the right format.
 
+Note: Starelette uses ASGI(asyncronous server gateway Interface) protocol which is asyncronous in nature. asyncronous mean it can handle mutiple request at a time.
+        In FastAPI , we use uvicorn as web server.
+
+CRUD: create retrieve update delete, these are the four interactions we can do with a software.
+
+HTTP: It is a protocol that allows client and server to interact with each other, there are four http methods to interact, GET POST PUT DELETE.
+
+Path Params: localhost:8000/view/_
+        _ is the path parameter which will locate a specific resoyrce.
+        for example localhost:8000/view/3 , 3 is the path parameter, without 3 it was a fixed route.
+
+Path(): this function is used to provide metadata, valodation rules and documentation hints for path parameters in your api.
+        Tiltle, description, Example , ge,gt,le,lt, min_length, max_length,regex
+        go to /docs to view.
+
+HTTP Status Codes:
+
+HTTP status codes are numbers sent by the server to tell whether a request succeeded or failed.
+
+Main Categories
+Range	Meaning
+1xx	Information
+2xx	Success
+3xx	Redirection
+4xx	Client Error
+5xx	Server Error
+
+Query Param:
+These are optional key-value pairs appended to the end of a URL used to pass additional data to the server in an HTTP request.
+Example- /view?city=Delhi&sort_by=age
+        ? start the Query
+        & for seperating multiple params
+
+Query(): It is a utility function provided by FastAPI to declare, validate and document query parameters in API endpoints.
+
