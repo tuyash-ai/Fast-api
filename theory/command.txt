@@ -1,4 +1,4 @@
-1.pip install fastapi uvicorn Pydantic
+1.pip install fastapi uvicorn pydantic
 
 To run the appl
 2. uvicorn main:app --reload

@@ -45,3 +45,4 @@ Query(): It is a utility function provided by FastAPI to declare, validate and d
 
 Pydantic:
         We have to define a Pydantic model that represents the ideal schema of the data.
+        Pydantic will automatically validate the data and coerce it into the correct python types.
