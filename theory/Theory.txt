@@ -1,6 +1,6 @@
 API: API stands for Application Programming Interfaces. It is a software bridge that allows two different applications to communicate with eac other to share data and funtionality using a defined set of rules, protocols and data format.
 
-Note: The architecture in which frontend and backend can talk to each other without using an api is called a monolithic architecture where in fronted and backend are in a same folder.
+        Note: The architecture in which frontend and backend can talk to each other without using an api is called a monolithic architecture where in fronted and backend are in a same folder.
         The problem in monolithic architecture is that frontend and backend code are tightly coupled. SO if any other software application wants backend data, we cannot provide it.
 
 JSON: JSON stands for JavaScript Object Notation. It is a lightweight, text-based, and language-independent data-interchange format used to store and transport data, often between a server and a web application. 
@@ -8,7 +8,7 @@ JSON: JSON stands for JavaScript Object Notation. It is a lightweight, text-base
 FastAPI: It is a modern, high performance web framework for building APIs with python. It is build on Starlette and Pydantic libraries of python.
         Starelette manages how your API recieves request and sends back responses and Pydantic is used to check if the data coming into your API is correct and in the right format.
 
-Note: Starelette uses ASGI(asyncronous server gateway Interface) protocol which is asyncronous in nature. asyncronous mean it can handle mutiple request at a time.
+        Note: Starelette uses ASGI(asyncronous server gateway Interface) protocol which is asyncronous in nature. asyncronous mean it can handle mutiple request at a time.
         In FastAPI , we use uvicorn as web server.
 
 CRUD: create retrieve update delete, these are the four interactions we can do with a software.
@@ -25,15 +25,15 @@ Path(): this function is used to provide metadata, valodation rules and document
 
 HTTP Status Codes:
 
-HTTP status codes are numbers sent by the server to tell whether a request succeeded or failed.
+        HTTP status codes are numbers sent by the server to tell whether a request succeeded or failed.
 
-Main Categories
-Range	Meaning
-1xx	Information
-2xx	Success
-3xx	Redirection
-4xx	Client Error
-5xx	Server Error
+        Main Categories
+        Range	Meaning
+        1xx	Information
+        2xx	Success
+        3xx	Redirection
+        4xx	Client Error
+        5xx	Server Error
 
 Query Param:
 These are optional key-value pairs appended to the end of a URL used to pass additional data to the server in an HTTP request.
@@ -43,3 +43,5 @@ Example- /view?city=Delhi&sort_by=age
 
 Query(): It is a utility function provided by FastAPI to declare, validate and document query parameters in API endpoints.
 
+Pydantic:
+        We have to define a Pydantic model that represents the ideal schema of the data.

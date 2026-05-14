@@ -32,3 +32,4 @@ def sort_patients(sort_by: str = Query(..., description="The field to sort by", 
     data = load_data()
     sorted_data = sorted(data.values(), key=lambda x: x[sort_by], reverse=(order == "desc"))
     return sorted_data
+
