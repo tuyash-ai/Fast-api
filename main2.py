@@ -35,6 +35,13 @@ class Patient(BaseModel):
         else:
             return "Obese"
 
+class PatientUpdate(BaseModel):
+    name:Annotated[Optional[str],Field(None,max_length=50,description="patient name")]
+    city:Annotated[Optional[str],Field(None,description="patient city")]
+    age:Annotated[Optional[int],Field(None,gt=0,lt=120,description="patient age")]
+    height:Annotated[Optional[float],Field(None,gt=0,description="height of patient in cm")]
+    weight:Annotated[Optional[float],Field(None,gt=0,description="weight of patient in kg")]
+
 def load_patients():
     with open("patients.json", "r") as f:
         data=json.load(f)
@@ -63,3 +70,6 @@ def create_patient(patient: Patient): #validation and type coercion happens here
 
     save_patient(data)
     return JSONResponse(status_code=201, content={"message": "Patient created successfully"})
+
+@app.put("/update/{patient_id}")
+def update_patient(patient_id:str,patient_update:PatientUpdate):
